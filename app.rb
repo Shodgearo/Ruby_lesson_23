@@ -35,9 +35,10 @@ post '/visit' do
   @phone = params[:phone]
   @time = params[:time]
   @var = params[:variable]
+  @color = params[:color]
 
   f = File.open './public/users.txt', 'a'
-  f.write "#{@name}, #{@phone}, #{@time}, #{@var}\n"
+  f.write "#{@name}, #{@phone}, #{@time}, #{@var}, #{@color}\n"
   f.close
 
   erb :visit
